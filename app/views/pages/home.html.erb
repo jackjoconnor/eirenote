@@ -1,8 +1,15 @@
 <div class="banner">
   <div class="banner-content">
     <h1><span id="letter-green">Eir</span><span id="letter-white">eN</span><span id="letter-orange">ote</span></h1>
-    <p>Discover Ireland. Never lose a memory. Make a note of it.</p>
-    <a class="btn btn-success btn-lg">Leave a note</a>
+    <%# <p>Discover Ireland. Never lose a memory. Make a note of it.</p>
+    <a class="btn btn-success btn-lg">Leave a note</a> %>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+    <%# <button class="btn btn-success">Leave a note</button> %>
+    <div>
+      <%= link_to 'Leave a note', new_user_session_path, :class => "btn btn-success" %>
+    </div>
   </div>
 </div>
 
@@ -11,13 +18,13 @@
     <div class="col-xs-12 col-sm-4">
       <%= image_tag "create.png", alt: "Create a note" %>
       <h2>Create</h2>
-      <p>Create a note so you will never forget your trip.</p>
+      <p>Create a note for each experience.</p>
     </div>
     <div class="col-xs-12 col-sm-4">
       <img src="images/read.png" alt="">
       <%= image_tag "read.png", alt: "Read a note" %>
       <h2>Read</h2>
-      <p>Read your notes whenever you feel like it.</p>
+      <p>Read your notes whenever you want.</p>
     </div>
     <div class="col-xs-12 col-sm-4">
       <%= image_tag "keep.png", alt: "Create a note" %>
@@ -25,6 +32,50 @@
       <p>Keep your notes for as long as you want.</p>
     </div>
   </div>
+</div>
+
+<div class="wrapper-grey padded">
+<div class="container">
+  <h2 class="text-center">Your memories of Ireland noted.</h2>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= asset_path 'blarney_castle.png' %>);">
+        <div class="card-category">Cork</div>
+        <div class="card-description">
+          <h2>Kissed the Blarney Castle stone</h2>
+          <p>I kissed the Blarney stone now I have the gift of eloquence...</p>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'sarah.png', class: "card-user avatar avatar-large" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= asset_path 'ring_of_kerry.png' %>);">       
+      <div class="card-category">Kerry</div>
+        <div class="card-description">
+          <h2>Road tripped through the Ring of Kerry</h2>
+          <p>We drove along the beautiful Ring of Kerry route...</p>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'sung.png', class: "card-user avatar avatar-large" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= asset_path 'guinness.png' %>);">       
+      <div class="card-category">Dublin</div>
+        <div class="card-description">
+          <h2>Visited the Guinness Storehouse</h2>
+          <p>Had the perfect pint of Guinness at the home of Guinness...</p>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'peter.png', class: "card-user avatar avatar-large" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 

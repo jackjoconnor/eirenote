@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Open-sans, sans-serif;
+  background-color: $white;
 }
 
 h1,
@@ -17,6 +18,14 @@ h2 {
   margin-top: 0;
 }
 
+.text-center {
+  color: #333333;
+}
+
 .padded {
   padding: 100px 0;
+}
+
+.wrapper-grey {
+  background: $white;
 }
