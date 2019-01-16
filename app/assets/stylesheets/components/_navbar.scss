@@ -1,8 +1,8 @@
 /* Main navbar */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
-  transition: all 0.3s ease;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+  background-color: transparent;
+  transition: 0.5s background-color ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
@@ -10,9 +10,21 @@
   justify-content: space-between;
 }
 
+.navbar-wagon-green {
+  background-color: #008002;
+  font-size: 25px;
+}
+
+i.fa {
+  color: $green;
+}
+
 /* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+.navbar-wagon-brand {
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /* User Avatar */
@@ -40,6 +52,7 @@
   color: #616668;
   font-size: 14px;
 }
+
 .navbar-wagon-link:hover {
   color: #da552f;
   text-decoration: none;
@@ -51,7 +64,8 @@
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+
+.navbar-wagon-dropdown-menu li>a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
@@ -59,10 +73,12 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+
+.navbar-wagon-dropdown-menu li>a:hover {
   background: transparent !important;
   color: black !important;
 }
+
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
   height: 10px;

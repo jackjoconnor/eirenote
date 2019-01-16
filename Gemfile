@@ -25,6 +25,9 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 
+# Authentication gem
+gem 'devise'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -33,7 +36,6 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "pry-rails"
-  gem "awesome_print", require: "ap"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
