@@ -1,14 +1,12 @@
+
 <div class="banner">
   <div class="banner-content">
     <h1><span id="letter-green">Eir</span><span id="letter-white">eN</span><span id="letter-orange">ote</span></h1>
-    <%# <p>Discover Ireland. Never lose a memory. Make a note of it.</p>
+    <%# <p>Discover Ireland. Never forget your experience. Make a note of it.</p>
     <a class="btn btn-success btn-lg">Leave a note</a> %>
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
-    <%# <button class="btn btn-success">Leave a note</button> %>
+    <p><span id="banner-typed-text"></span></p>
     <div>
-      <%= link_to 'Leave a note', new_user_session_path, :class => "btn btn-success" %>
+      <%= link_to 'Leave a note', new_user_session_path, :class => "btn btn-success btn-lg" %>
     </div>
   </div>
 </div>
@@ -51,7 +49,7 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url(<%= asset_path 'ring_of_kerry.png' %>);">       
+      <div class="card" style="background-image: url(<%= asset_path 'ring_of_kerry.png' %>);">
       <div class="card-category">Kerry</div>
         <div class="card-description">
           <h2>Road tripped through the Ring of Kerry</h2>
@@ -63,7 +61,7 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url(<%= asset_path 'guinness.png' %>);">       
+      <div class="card" style="background-image: url(<%= asset_path 'guinness.png' %>);">
       <div class="card-category">Dublin</div>
         <div class="card-description">
           <h2>Visited the Guinness Storehouse</h2>
@@ -77,5 +75,3 @@
   </div>
 </div>
 </div>
-
-

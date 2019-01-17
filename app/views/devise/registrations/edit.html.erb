@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 form">
+      <h2 class="h2">Edit <%= resource_name.to_s.humanize %></h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      label: false,
+                      placeholder: "email" %>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <% end %>
+
+          <%= f.input :username,
+                      required: true,
+                      autofocus: true,
+                      label: false,
+                      placeholder: "username" %>
+
+          <%= f.input :avatar,
+                      label: false %>
+          <label for="file-upload" class="custom-file-upload">
+              <i class="fa fa-cloud-upload"></i> upload avatar
+          </label>
+          <input id="file-upload" type="file"/>
+
+          <%= f.input :password,
+                      hint: "leave it blank if you don't want to change it",
+                      required: false,
+                      input_html: { autocomplete: "new-password" },
+                      placeholder: "password",
+                      label: false %>
+          <%= f.input :password_confirmation,
+                      required: false,
+                      input_html: { autocomplete: "new-password" },
+                      label: false,
+                      placeholder: "password confirmation" %>
+          <%= f.input :current_password,
+                      hint: "we need your current password to confirm your changes",
+                      required: true,
+                      input_html: { autocomplete: "current-password" },
+                      label: false,
+                      placeholder: "current password" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Update", class: "btn btn-success"%>
+        </div>
+      <% end %>
+      <div class="form-links">
+        <%= link_to "Back", :back %>
+        <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+
+      </div>
+    </div>
+  </div>
+</div>
+

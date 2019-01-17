@@ -1,0 +1,40 @@
+.button {
+
+  //position & size
+  height: 40px;
+
+  // Box composition
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Typo
+  font-family: 'Montserrat';
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+
+  // Visual
+  background: $green;
+  border-radius: 50px;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 24px -5px rgba(0, 0, 0, 0.38);
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.button:active {
+  background: $orange;
+}
+
+.small {
+  font-size: 12px;
+  height: 30px;
+}

@@ -1,0 +1,22 @@
+.form {
+  margin-top: 35px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  .h2 {
+    text-align: center;
+    color: $dark-gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.form-button {
+  font-weight: bold;
+  width: 20%;
+}

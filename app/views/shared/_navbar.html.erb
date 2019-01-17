@@ -1,8 +1,10 @@
 <div class="navbar-wagon navbar-fixed-top navbar-wagon-green">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <div id="logo">
+    <%= link_to root_path do %>
       <span id="letter-green">Eir</span><span id="letter-white">eN</span><span id="letter-orange">ote</span> <i class="fa fa-sticky-note"></i>
-  <% end %>
+    <% end %>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -14,7 +16,7 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "read.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag current_user.avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to edit_user_registration_path do %>
@@ -54,3 +56,4 @@
     </div>
   </div>
 </div>
+
