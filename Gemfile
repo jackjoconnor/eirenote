@@ -28,8 +28,16 @@ gem 'simple_form'
 # Authentication gem
 gem 'devise'
 
+# Image Upload gems
+gem 'cloudinary'
+gem 'carrierwave'
+
+# Faker gem for seed.rb file
+gem 'faker'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do
