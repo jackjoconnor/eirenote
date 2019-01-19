@@ -1,5 +1,5 @@
 const changeNavbarOnScroll = () => {
-  const navbar = document.querySelector('.navbar-wagon');
+  const navbar = document.querySelector('.navbar-wagon-home-page');
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= window.innerHeight) {

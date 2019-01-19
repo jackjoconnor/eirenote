@@ -1,4 +1,4 @@
-<div class="navbar-wagon navbar-fixed-top navbar-wagon-green">
+<div class="navbar-wagon-home-page navbar-fixed-top navbar-wagon-green">
   <!-- Logo -->
   <div id="logo">
     <%= link_to root_path do %>
@@ -12,6 +12,14 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+    <div class="navbar-wagon">
+      <div class="input-group">
+        <input class="form-control search-form"name="query" type="search" placeholder="Search your notes" aria-label="Search" value="<%= params[:query] %>">
+        <span class="input-group-btn">
+          <button type="submit"class="btn search-btn" data-target="#search-form"name="q"><i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -20,21 +28,24 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to edit_user_registration_path do %>
-                <i class="fa fa-cog"></i> <%= t("Edit profile") %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Edit profile") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out-alt"></i> <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
           </ul>
         </div>
       </div>
+    </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+       <%= t(".sign_in", default: "Log in") %> <i class="fa fa-sign-in-alt"></i> 
       <% end %>
+    <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

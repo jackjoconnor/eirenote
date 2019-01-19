@@ -1,0 +1,23 @@
+<div class="col-xs-6 col-xs-offset-3 form">
+  <% @notes.each do |note| %>
+  <div class="notes-index">
+      <h2><%= link_to note.title, note_path(note) %> <small><%= time_ago_in_words(note.created_at)%> ago</small></h2>
+      <p><%= note.content.truncate(100, separator: /\s/) %></p>
+      <% if note.content.length > 100 %>
+      <p>
+      <%= link_to note_path(note), class: "label label-success" do%>
+        Read more <i class="fas fa-angle-double-right"></i>
+        <% end %>
+      </p>
+      <% end %>
+  </div>
+  <% end %>
+  <%= will_paginate @notes %>
+  <br>
+  <%= link_to new_note_path, class: "btn btn-default btn-sm" do %>
+    Add a new note <i class="far fa-edit"></i>
+  <% end %>
+</div>
+
+
+

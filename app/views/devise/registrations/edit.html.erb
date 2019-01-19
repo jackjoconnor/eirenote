@@ -25,22 +25,18 @@
 
           <%= f.input :avatar,
                       label: false %>
-          <label for="file-upload" class="custom-file-upload">
-              <i class="fa fa-cloud-upload"></i> upload avatar
-          </label>
-          <input id="file-upload" type="file"/>
-
+  
           <%= f.input :password,
                       hint: "leave it blank if you don't want to change it",
                       required: false,
                       input_html: { autocomplete: "new-password" },
-                      placeholder: "password",
+                      placeholder: "new password",
                       label: false %>
           <%= f.input :password_confirmation,
                       required: false,
                       input_html: { autocomplete: "new-password" },
                       label: false,
-                      placeholder: "password confirmation" %>
+                      placeholder: "new password confirmation" %>
           <%= f.input :current_password,
                       hint: "we need your current password to confirm your changes",
                       required: true,
@@ -54,9 +50,8 @@
         </div>
       <% end %>
       <div class="form-links">
-        <%= link_to "Back", :back %>
+        <%= link_to "Back", :back %> |
         <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-
       </div>
     </div>
   </div>

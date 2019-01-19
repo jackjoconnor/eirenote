@@ -7,6 +7,5 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  validates :username, presence: true,
-                  uniqueness: { case_sensitive: false }
+  validates :username, presence: true, uniqueness: true
 end

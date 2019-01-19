@@ -1,0 +1,5 @@
+<%= simple_form_for @note do |f| %>
+  <%= f.input :title, label: "Add your title" %>
+  <%= f.input :content, label: "Add some content:", as: :text, input_html: { rows: 10 } %>
+  <%= f.button :submit, "Add note", class: "btn btn-success" %>
+<% end %>
