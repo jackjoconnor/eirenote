@@ -1,6 +1,8 @@
-Project name:
-
 EireNote
+
+You can view the app online:
+
+www.eirenote.com
 
 Project aim:
 
