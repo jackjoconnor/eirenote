@@ -3,11 +3,11 @@
    
   <div>
     <% if params[:query]%>
-        <h2 id="index-header"></span>Search results for: "<%= params[:query] %>"</span></h2>
+        <h2 class="index-header"></span>Search results for: "<%= params[:query] %>"</span></h2>
     <% elsif current_user.notes.empty? %>
-        <h2 id="index-header"><span>Why not create your first note?!</span></h2>
+        <h2 class="index-header"><span>Why not create your first note?!</span></h2>
     <% else %>
-        <h2 id="index-header"><span>My notes </span></h2>
+        <h2 class="index-header"><span>My notes </span></h2>
     <% end %>
     <span class= "index-new">
       <%= link_to new_note_path, class: "index-new-btn" do %>
@@ -25,7 +25,7 @@
           <div class="card-category"><i class="fas fa-map-marker-alt"></i> <%= note.location %></div>
             <div class="card-description">
               <h2><%= note.title.titleize %><p> <%= time_ago_in_words(note.created_at)%> ago</p></h2>
-              <p><%= note.content[0..100] %>...<b><%= link_to "More info", note_path(note), id: "link-colour"%> </b></p>
+              <p><%= note.content[0..100] %>...<b><%= link_to "More info", note_path(note), class: "link-colour"%> </b></p>
             </div>
             <%= link_to note_path(note) do %>
               <%= cl_image_tag current_user.avatar_url, class: "card-user avatar avatar-large", radius: 20, gravity: :face %>
