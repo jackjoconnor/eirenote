@@ -1,13 +1,20 @@
 <div class="wrapper-grey padded">
 <div class="container">
-
-  <% if params[:query]%>
-      <h1 id="index-header">Search results for: "<%= params[:query] %>"</h1>
-  <% elsif current_user.notes.empty? %>
-      <h1 id="index-header">You have no notes. Why not create your first note?!</h1>
-  <% else %>
-      <h1 id="index-header"><span>My notes </span></h1>
-  <% end %>
+   
+  <div>
+    <% if params[:query]%>
+        <h2 id="index-header"></span>Search results for: "<%= params[:query] %>"</span></h2>
+    <% elsif current_user.notes.empty? %>
+        <h2 id="index-header"><span>Why not create your first note?!</span></h2>
+    <% else %>
+        <h2 id="index-header"><span>My notes </span></h2>
+    <% end %>
+    <span class= "index-new">
+      <%= link_to new_note_path, class: "index-new-btn" do %>
+        New Note <i class="fas fa-pencil-alt"></i>
+      <% end %>
+    </span>
+  </div>
 
   <div class="row" style="margin: 45px">
     <div class="row" style="margin: 10px">
