@@ -1,24 +1,31 @@
-# README
+Project name:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+EireNote
 
-Things you may want to cover:
+Project aim:
 
-* Ruby version
+To build a Notetaking Application using Ruby on Rails 5.2.
 
-* System dependencies
+If someone visits or is travelling around Ireland they can use EireNote
+to document every experience throughout their travels and never lose a memory.
+Eirenote can be used by anyone to create their own set of notes
+and upload and attach an image to that note.
 
-* Configuration
+User Stories:
 
-* Database creation
+As a User:
 
-* Database initialization
+- I can sign up to the application
+- I can log in to the application (and view only my notes)
+- I can log out of the application
+- I can delete my account
 
-* How to run the test suite
+- I can create a note
+- I can read all my notes
+- I can read one note
+- I can update a note
+- I can delete a note
 
-* Services (job queues, cache servers, search engines, etc.)
+- I can search for a note
 
-* Deployment instructions
-
-* ...
+- I can upload an image to a note
