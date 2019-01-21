@@ -18,9 +18,9 @@ class NotesController < ApplicationController
   
   def index
     if(params[:query])
-      @notes = Note.search_by_title_and_content_and_location(params[:query]).paginate(page: params[:page], per_page: 3)
+      @notes = Note.search_by_title_and_content_and_location(params[:query]).paginate(page: params[:page], per_page: 3).where(user: current_user)
     else
-      @notes = Note.all.order("created_at DESC").paginate(page: params[:page], per_page: 3)
+      @notes = Note.where(user: current_user).order("created_at DESC").paginate(page: params[:page], per_page: 3)
     end
   end
 
