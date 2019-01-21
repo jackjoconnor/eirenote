@@ -38,6 +38,9 @@ gem 'faker'
 # Paginate gem
 gem 'will_paginate'
 
+# Search gem
+gem 'pg_search'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'

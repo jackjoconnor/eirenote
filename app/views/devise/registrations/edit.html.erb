@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 form">
-      <h2 class="h2">Edit <%= resource_name.to_s.humanize %></h2>
+      <h2 class="form-header">Edit <%= resource_name.to_s.humanize %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Update", class: "btn btn-success"%>
+          <%= f.button :submit, "Update", class: "btn-form"%>
         </div>
       <% end %>
       <div class="form-links">

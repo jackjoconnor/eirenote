@@ -14,5 +14,9 @@
   &:hover {
     color: $green;
     text-decoration: none;
+
+    i {
+      color: $green;
+    }
   }
 }

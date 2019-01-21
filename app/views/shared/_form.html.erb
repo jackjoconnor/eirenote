@@ -1,5 +1,45 @@
-<%= simple_form_for @note do |f| %>
-  <%= f.input :title, label: "Add your title" %>
-  <%= f.input :content, label: "Add some content:", as: :text, input_html: { rows: 10 } %>
-  <%= f.button :submit, "Add note", class: "btn btn-success" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 form">
+      <h2 class="form-header"></h2>
+      <%= simple_form_for [@note] do |f| %>
+        <% if @note.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @note.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.input :title,                     
+                    required: true,
+                    placeholder: "Add a title",
+                    label: false %>
+        <%= f.input :content, 
+                    as: :text, 
+                    input_html: { rows: 10 },
+                    required: true,
+                    placeholder: "Add some content",
+                    label: false %>
+        <%= f.input :location,                   
+                    required: true,
+                    placeholder: "Add a location",
+                    label: false%>
+        <%= f.input :photo,
+                    placeholder: "Add a photo",
+                    label: false %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <div class="form-actions">
+          <%= f.button :submit, "Write a note", class: "btn-form"%>
+        </div>
+      <% end %>
+      <hr>
+      <span class="link-color">
+        <%= link_to notes_path do %>
+          <i class="fa fa-history"></i> Back to your Notes
+        <% end %>
+      </span>
+    </div>
+  </div>
+</div>

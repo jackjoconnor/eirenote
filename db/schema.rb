@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_193705) do
+ActiveRecord::Schema.define(version: 2019_01_19_150043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,11 @@ ActiveRecord::Schema.define(version: 2019_01_17_193705) do
   create_table "notes", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
-    t.string "photo"
+    t.string "photo", default: "https://res.cloudinary.com/dqiosiccn/image/upload/v1547997566/fdafs0ruf95mc03cmoxj.jpg"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
@@ -33,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_193705) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "avatar"
+    t.string "avatar", default: "https://res.cloudinary.com/dqiosiccn/image/upload/v1547946569/iqkmsrrrqjbaaqgkeotf.png"
     t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

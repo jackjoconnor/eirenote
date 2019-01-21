@@ -1,6 +1,8 @@
 .card {
   height: 250px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  // back-ground gradient
+  // linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2))
   background-size: cover !important;
   color: white;
   position: relative;
@@ -33,6 +35,46 @@
 
 .card-description p {
   font-size: 15px;
+}
+
+.card-pagination {
+  color: $dark-gray;
+
+  a {
+    text-decoration: none;
+    color: $orange;
+
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}
+
+#link-colour {
+  color: $white;
+
+  a {
+    text-decoration: none;
+    color: $orange;
+
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}
+
+#index-header {
+  text-align: center;
+  color: $dark-gray;
+  width: auto;
+  text-align: center;
+  margin: auto;
+
+  span {
+    border-bottom: 1px solid whitesmoke;
+  }
 }
 
 // .card-link {

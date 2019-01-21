@@ -8,7 +8,7 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-  .h2 {
+  .form-header {
     text-align: center;
     color: $dark-gray;
     margin-top: 25px;
@@ -19,4 +19,23 @@
 .form-button {
   font-weight: bold;
   width: 20%;
+}
+
+
+a {
+  text-decoration: none;
+  color: $green;
+
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+
+    i {
+      color: $orange;
+    }
+  }
+}
+
+#user_remember_me {
+  margin: 5px;
 }

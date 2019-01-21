@@ -6,7 +6,19 @@ Note.delete_all
 
 # TEST 1:
 
-puts "Populating the database with Fake Users and notes..."
+puts "Populating the database with Fake Users and Notes..."
+
+
+COUNTIES = ["Clare", "Cork", "Kerry", 
+  "Limerick", "Tipperary", "Waterford",
+  "Carlow", "Dublin", "Kildare", "Kilkenny",
+  "Laois", "Longford", "Louth", "Meath",
+  "Offaly", "Westmeath", "Wexford", "Wicklow",
+  "Galway", "Leitrim", "Mayo", "Roscommon",
+  "Sligo", "Antrim", "Armagh", "Down",
+  "Fermanagh", "Derry", "Tyrone",
+  "Cavan", "Donegal", "Monaghan"
+]
 
 5.times do
   User.create!(email: Faker::Internet.email,
@@ -18,6 +30,7 @@ rand(5..10).times do
     Note.create!(
       title: Faker::Book.title,
       content: Faker::SiliconValley.quote,
+      location: COUNTIES.sample,
       user: User.all.sample,
       remote_photo_url: Faker::Placeholdit.image
     )

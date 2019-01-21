@@ -6,7 +6,7 @@
     <a class="btn btn-success btn-lg">Leave a note</a> %>
     <p><span id="banner-typed-text"></span></p>
     <div>
-      <%= link_to 'Leave a note', new_user_session_path, :class => "btn btn-success btn-lg" %>
+      <%= link_to 'Leave a note', new_user_session_path, :class => "btn-form" %>
     </div>
   </div>
 </div>
@@ -50,7 +50,7 @@
     </div>
     <div class="col-xs-12 col-sm-4">
       <div class="card" style="background-image: url(<%= asset_path 'ring_of_kerry.png' %>);">
-      <div class="card-category">Kerry</div>
+      <div class="card-category"><i class="fas fa-map-marker-alt"></i> Kerry</div>
         <div class="card-description">
           <h2>Road tripped through the Ring of Kerry</h2>
           <p>We drove along the beautiful Ring of Kerry route...</p>

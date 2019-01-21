@@ -1,11 +1,11 @@
 import 'bootstrap';
-import {
-  changeNavbarOnScroll
-} from '../components/navbar';
+// import {
+//   changeNavbarOnScroll
+// } from '../components/navbar';
 import {
   loadDynamicBannerText
 } from '../components/banner';
 
 
-changeNavbarOnScroll();
+// changeNavbarOnScroll();
 loadDynamicBannerText();

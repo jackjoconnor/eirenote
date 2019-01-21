@@ -1,0 +1,46 @@
+.show-photo {
+  // width: 650px;
+  // height: 650px;
+  // background: asset_url("ireland.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.show-text {
+  margin-top: 20px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 5px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  h2 {
+    color: $dark-gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  small {
+    color: $green;
+  }
+
+  .show-content {
+    margin-top: 20px;
+  }
+}
+
+.show-text-border {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.show-icon {
+  border-top: 1px solid whitesmoke;
+
+  i {
+    color: $green;
+  }
+}

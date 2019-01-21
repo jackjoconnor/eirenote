@@ -1,17 +1,33 @@
-
-<div class="col-xs-6 col-xs-offset-3 form">
-
-  <h1><%= @note.title %></h1>
-  <p class="lead"><%= @note.content %></p>
-  <br>
-  <div class="btn-group">
-    <%= link_to 'Notes', notes_path, class: "btn btn-success" %> 
-    <%# if you want to notes publically visible by other users %>
-    <% if @note.user == current_user %>
-      <%= link_to 'Edit Note', edit_note_path(@note), class: "btn btn-success"  %>
-      <%= link_to 'Delete Note', note_path(@note), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success"  %>
-    <% end %>
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="show-text">
+          <h2 class="show-text-border"><%= @note.title.titleize %>
+          <p><small><%= time_ago_in_words(@note.created_at)%> ago</small></p>
+          </h2>
+          <p class="show-content"><%= simple_format(@note.content) %></p>
+          <p class="show-icon">
+            <%= link_to notes_path do %>
+                <i class="fa fa-history"></i>
+            <% end %>
+            <%= link_to edit_note_path(@note) do %>
+                <i class="fas fa-edit"></i>
+            <% end %>
+              <%= link_to note_path(@note), method: "delete" do %>
+                <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="show-photo">
+          <% if @note.photo.present? %>
+            <%= cl_image_tag @note.photo, height: 650, width: 650, crop: :fill %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
- 
+</section>
 
