@@ -9,7 +9,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(notes_params)
     @note.user = current_user
-    if @note.save!
+    if @note.save
       redirect_to note_path(@note), notice: "Note sucessfully created."
     else
       render :new
