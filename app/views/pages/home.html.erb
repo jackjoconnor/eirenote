@@ -2,14 +2,14 @@
 <div class="banner">
   <div class="banner-content">
     <h1><span id="letter-green">Eir</span><span id="letter-white">eN</span><span id="letter-orange">ote</span></h1>
-    <%# <p>Discover Ireland. Never forget your experience. Make a note of it.</p>
-    <a class="btn btn-success btn-lg">Leave a note</a> %>
+    <%# <p>Discover Ireland. Never forget your experience. Make a note of it.</p> %>
     <p><span id="banner-typed-text"></span></p>
     <div>
       <%= link_to 'Leave a note', new_user_session_path, :class => "btn-form" %>
     </div>
   </div>
 </div>
+
 
 <div class="container text-center padded">
   <div class="row">
@@ -19,7 +19,6 @@
       <p>Create a note for each experience.</p>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <img src="images/read.png" alt="">
       <%= image_tag "read.png", alt: "Read a note" %>
       <h2>Read</h2>
       <p>Read your notes whenever you want.</p>

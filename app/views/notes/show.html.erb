@@ -1,4 +1,7 @@
 <section>
+  <% content_for(:title) do %>
+    EireNote | <%= @note.title %>
+  <% end %>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
