@@ -2,7 +2,7 @@ EireNote
 
 You can view the app online:
 
-www.eirenote.com
+https://www.eirenote.com/
 
 Project aim:
 
